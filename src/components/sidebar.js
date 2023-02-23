@@ -12,7 +12,7 @@ const StyledLink = styled(Link)`
 export const Sidebar = () => {
     return(
         <div className="sidebar">
-            <div><span className="fa fa-music"></span><span><StyledLink to="/videos">Video Music</StyledLink></span></div>
+            <div><span className="fa fa-music"></span><StyledLink to="/videos">Video Music</StyledLink></div>
             <div><span className="fa fa-font"></span><StyledLink to="/videos">Learning English</StyledLink></div>
             <div><span className="fa fa-headphones"></span><StyledLink to="/videos">English Podcasts</StyledLink></div>
             <div><span className="fa fa-gamepad"></span><StyledLink to="/videos">Game</StyledLink></div>
