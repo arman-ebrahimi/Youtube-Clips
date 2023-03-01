@@ -1,0 +1,97 @@
+html, .App {
+  background-color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 30px;
+}
+.navbar a {
+  font-size: 3em;
+  text-decoration: none;
+  color: red;
+}
+.navbar .search-input {
+  padding: 5px 10px;
+  border-radius: 20px;
+  width: 300px;
+}
+.navbar .search-input:focus {
+  outline: none;
+}
+.navbar .search-icon {
+  position: relative;
+  left: -30px;
+  color: tomato;
+}
+
+.home-page {
+  display: flex;
+}
+.home-page .sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  padding-left: 15px;
+  border-right: solid rgba(255, 255, 255, 0.5) 1px;
+}
+.home-page .sidebar div {
+  margin-top: 30px;
+}
+.home-page .sidebar div:last-child {
+  margin-bottom: 30px;
+}
+.home-page .sidebar span {
+  font-size: 1.3em;
+  margin-right: 8px;
+  color: red;
+}
+.home-page .archive-box h3 {
+  color: white;
+}
+.home-page .archive-box h3 span {
+  color: red;
+  text-transform: capitalize;
+}
+.home-page .archived-videos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.home-page .archived-videos iframe {
+  width: 450px;
+  height: 270px;
+}
+.home-page .new-videos {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+.home-page .new-videos .card {
+  width: 25%;
+  height: 300px;
+}
+.home-page .new-videos .card .card-body {
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.home-page .new-videos .card .card-body .card-title {
+  font-size: 0.9em;
+}
+.home-page .new-videos .card .card-body .card-text {
+  font-size: 0.7em;
+}
+.home-page .new-videos .card .card-body .card-text a {
+  text-decoration: none;
+  color: salmon;
+}
+
+/*# sourceMappingURL=App.css.map */

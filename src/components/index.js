@@ -1,3 +1,5 @@
 export * from "./navbar";
 export * from "./sidebar";
-export * from "./videosPart";
+export * from "./archivedVideos";
+export * from "./newVideos";
+export * from "./videos";

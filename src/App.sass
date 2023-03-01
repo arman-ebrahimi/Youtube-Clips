@@ -23,7 +23,7 @@ html, .App
   .sidebar
     display: flex
     flex-direction: column
-    width: 200px
+    min-width: 200px
     padding-left: 15px
     border-right: solid rgba(255,255,255, 0.5) 1px
     div
@@ -32,9 +32,14 @@ html, .App
       margin-bottom: 30px
     span
       font-size: 1.3em
-      margin-right: 15px
+      margin-right: 8px
       color: red
-  .videos-part
+  .archive-box h3
+    color: white
+    span
+      color: red
+      text-transform: capitalize
+  .archived-videos
     display: flex
     justify-content: space-around
     flex-wrap: wrap
@@ -42,3 +47,29 @@ html, .App
     iframe
       width: 450px
       height: 270px
+  .new-videos
+    padding: 10px
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    gap: 20px
+    justify-content: space-around
+    .card
+      width: 25%
+      height: 300px
+      .card-body
+        background-color: #333
+        color: white
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        .card-title
+          font-size: 0.9em
+        .card-text
+          font-size: 0.7em
+        .card-text a
+          text-decoration: none
+          color: salmon
+
+
+
