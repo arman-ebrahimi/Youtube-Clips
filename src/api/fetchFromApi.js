@@ -14,6 +14,6 @@ const options = {
 
 
 export const fetchFromApi = async (url) => {
-    const {data} = await axios.get(`${Base_Url}/${url}`, options, {mode: 'no-cors'});
+    const {data} = await axios.get(`${Base_Url}/${url}`, options);
     return data;
 }
