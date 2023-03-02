@@ -109,6 +109,7 @@ html, .App {
   color: tomato;
 }
 .video-detail .related-videos-box {
+  border-left: solid grey 1px;
   width: 30%;
 }
 
