@@ -108,6 +108,10 @@ html, .App {
   text-decoration: none;
   color: tomato;
 }
+.video-detail .description {
+  height: 200px;
+  overflow: scroll;
+}
 .video-detail .related-videos-box {
   border-left: solid grey 1px;
   width: 30%;
