@@ -62,8 +62,27 @@ html, .App {
   height: max-content;
 }
 .home-page .archived-videos .video-img {
+  position: relative;
+  cursor: pointer;
   width: 450px;
-  height: 270px;
+  height: 300px;
+  opacity: 0.8;
+}
+.home-page .archived-videos .video-img .play-icon, .home-page .archived-videos .video-img .load-icon {
+  color: red;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+.home-page .archived-videos .video-img .play-icon {
+  font-size: 3em;
+}
+.home-page .archived-videos .video-img:hover {
+  opacity: 1;
+}
+.home-page .archived-videos .video-img img {
+  width: 100%;
+  height: 100%;
 }
 .home-page .new-videos {
   padding: 10px;

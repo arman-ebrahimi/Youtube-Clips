@@ -46,8 +46,23 @@ html, .App
     width: 100%
     height: max-content
     .video-img
+      position: relative
+      cursor: pointer
       width: 450px
-      height: 270px
+      height: 300px
+      opacity: 0.8
+      .play-icon, .load-icon
+        color: red
+        position: absolute
+        top: 45%
+        left: 45%
+      .play-icon
+        font-size: 3em
+      &:hover
+        opacity: 1
+      img
+        width: 100%
+        height: 100%
   .new-videos
     padding: 10px
     width: 100%

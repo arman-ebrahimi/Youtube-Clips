@@ -14,11 +14,14 @@ export const VideoDetail = () => {
         setState(!value);
     }
     useEffect(() => {
-        window.scroll(0, 0)
+        setTimeout(function (){
+            window.scrollTo(0, 0)
+        }, 2)
         fetchFromApi(`search?part=snippet&relatedToVideoId=${videoId || id}&type=video`)
             .then((data) => setVideos(data.items))
         // eslint-disable-next-line
     }, [value])
+
     return(
         <div className="video-detail">
             <div className="single-video-box text-white">
