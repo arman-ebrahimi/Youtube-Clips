@@ -44,7 +44,8 @@ html, .App
     justify-content: space-around
     flex-wrap: wrap
     width: 100%
-    iframe
+    height: max-content
+    .video-img
       width: 450px
       height: 270px
   .new-videos
@@ -75,6 +76,7 @@ html, .App
   display: flex
   .single-video-box
     padding-left: 40px
+    padding-right: 20px
     width: 70%
     display: flex
     flex-direction: column
@@ -82,11 +84,13 @@ html, .App
       text-decoration: none
       color: tomato
   .description
-    height: 200px
-    overflow: scroll
+    max-height: 200px
+    overflow: auto
   .related-videos-box
     border-left: solid grey 1px
     width: 30%
+    height: 90vh
+    overflow-y: scroll
 
 
 

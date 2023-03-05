@@ -59,8 +59,9 @@ html, .App {
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
+  height: max-content;
 }
-.home-page .archived-videos iframe {
+.home-page .archived-videos .video-img {
   width: 450px;
   height: 270px;
 }
@@ -100,6 +101,7 @@ html, .App {
 }
 .video-detail .single-video-box {
   padding-left: 40px;
+  padding-right: 20px;
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -109,12 +111,14 @@ html, .App {
   color: tomato;
 }
 .video-detail .description {
-  height: 200px;
-  overflow: scroll;
+  max-height: 200px;
+  overflow: auto;
 }
 .video-detail .related-videos-box {
   border-left: solid grey 1px;
   width: 30%;
+  height: 90vh;
+  overflow-y: scroll;
 }
 
 /*# sourceMappingURL=App.css.map */
