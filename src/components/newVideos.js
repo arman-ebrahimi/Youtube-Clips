@@ -6,7 +6,9 @@ import {useEffect, useState} from "react";
 export const NewVideos = () => {
     const [videos, setVideos] = useState(null);
     useEffect(() => {
-        fetchFromApi("search?part=snippet&q=new").then((data) => setVideos(data.items))
+        fetchFromApi("search?part=snippet&q=new").then((data) => setVideos(data.items.map((item) => ({
+            ...item, id: item.id.videoId
+        }))))
     },[])
     return(
         <div className="d-flex flex-column">

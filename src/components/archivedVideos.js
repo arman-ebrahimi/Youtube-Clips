@@ -2,7 +2,7 @@ import {useLocation} from "react-router-dom";
 import {allVideos} from "../data/data";
 import {useNavigate} from "react-router-dom";
 import {fetchFromApi} from "../api/fetchFromApi";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export const ArchivedVideos = () => {
     let typeOfVideos = useLocation().state;
@@ -10,13 +10,14 @@ export const ArchivedVideos = () => {
     const navigate = useNavigate();
     const [showSpinner, setShowSpinner] = useState("");
     const handleClick = (item) => {
-        console.log(item);
         setShowSpinner(item);
         fetchFromApi(`videos?part=snippet&id=${item}`).then((data) => {
             navigate("/videoDetail", {state: data.items[0]});
-            console.log(data)
         })
     }
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    })
     return(
         <div className="d-flex flex-column archive-box">
             <h3 className="ms-3"><span className="category-name">{typeOfVideos}</span> videos</h3>

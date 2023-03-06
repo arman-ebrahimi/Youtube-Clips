@@ -2,9 +2,6 @@ import {useEffect} from "react";
 import {Link} from "react-router-dom";
 
 export const Videos = ({videos}) => {
-    useEffect(() => {
-        console.log(videos)
-    })
     return(
         videos && videos.map((item, index) => {
             return(

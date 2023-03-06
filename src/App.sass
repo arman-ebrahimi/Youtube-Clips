@@ -98,9 +98,25 @@ html, .App
     a
       text-decoration: none
       color: tomato
-  .description
-    max-height: 200px
-    overflow: auto
+    .description .three-points
+      cursor: pointer
+      color: tomato
+      margin-left: 5px
+      letter-spacing: 3px
+      position: relative
+      .title-hover
+        background-color: white
+        border-radius: 5px
+        padding: 0 5px
+        font-size: 15px
+        position: absolute
+        left: 25px
+        top: 15px
+        display: none
+        letter-spacing: 0
+        width: max-content
+      &:hover .title-hover
+        display: inline-block
   .related-videos-box
     border-left: solid grey 1px
     width: 30%

@@ -6,37 +6,39 @@ import {Link} from "react-router-dom";
 
 export const VideoDetail = () => {
     const videoDetail = useLocation().state;
-    const {id, id: {videoId}, snippet: {title, description, channelId, channelTitle}} = videoDetail;
+    const {id, snippet: {title, description, channelId, channelTitle}} = videoDetail;
+    const [partOfDescription, setPartOfDescription] = useState(description.substr(0, 200))
     const [videos, setVideos] = useState([]);
-    const [value, setState] = useState(true);
-
-    const handleForceUpdate = () => {
-        setState(!value);
+    function updateList(id) {
+        fetchFromApi(`search?part=snippet&relatedToVideoId=${id}&type=video`)
+            .then((data) => setVideos(data.items.map((item) => ({
+                ...item, id: item.id.videoId
+            }))))
     }
     useEffect(() => {
         setTimeout(function (){
             window.scrollTo(0, 0)
         }, 2)
-        fetchFromApi(`search?part=snippet&relatedToVideoId=${videoId || id}&type=video`)
-            .then((data) => setVideos(data.items))
+        updateList(id);
         // eslint-disable-next-line
-    }, [value])
+    }, [])
 
     return(
         <div className="video-detail">
             <div className="single-video-box text-white">
-                <ReactPlayer url={`https://www.youtube.com/watch?v=${videoId || id}`} controls />
+                <ReactPlayer url={`https://www.youtube.com/watch?v=${id}`} controls />
                 <p className="mt-5">{title}</p>
-                <div className="description">{description}</div>
+                <div className="description">{partOfDescription}<span className="three-points" onClick={description === partOfDescription ? () => setPartOfDescription(description.substr(0, 200)) : () => setPartOfDescription(description)}>...<span className="title-hover">{partOfDescription === description ? "Show Less" : "Show More"}</span></span></div>
                 <div>Visit Channel <span className="fa fa-angle-double-right my-4"></span><span className="fa fa-angle-double-right"></span>
                     {" "}<a href={`https://www.youtube.com/channel/${channelId}`}>{channelTitle}</a>
                 </div>
             </div>
             <div className="related-videos-box">
+                <div style={{color: "red", fontSize: "1.2em", textAlign: "center", marginBottom: "5px"}}>- Related videos -</div>
                 {videos && videos.map((item, index) => {
                     return(
                         <div key={index} className="mb-3">
-                            <Link to="/videoDetail" state={item} onClick={handleForceUpdate}>
+                            <Link to="/videoDetail" state={item} onClick={() => updateList(item?.id)}>
                                 <img src={item?.snippet?.thumbnails?.medium?.url} alt="related-img" />
                             </Link>
                         </div>

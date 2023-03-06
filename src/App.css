@@ -129,9 +129,27 @@ html, .App {
   text-decoration: none;
   color: tomato;
 }
-.video-detail .description {
-  max-height: 200px;
-  overflow: auto;
+.video-detail .single-video-box .description .three-points {
+  cursor: pointer;
+  color: tomato;
+  margin-left: 5px;
+  letter-spacing: 3px;
+  position: relative;
+}
+.video-detail .single-video-box .description .three-points .title-hover {
+  background-color: white;
+  border-radius: 5px;
+  padding: 0 5px;
+  font-size: 15px;
+  position: absolute;
+  left: 25px;
+  top: 15px;
+  display: none;
+  letter-spacing: 0;
+  width: max-content;
+}
+.video-detail .single-video-box .description .three-points:hover .title-hover {
+  display: inline-block;
 }
 .video-detail .related-videos-box {
   border-left: solid grey 1px;

@@ -23,6 +23,7 @@ export const Sidebar = () => {
         <div className="sidebar">
             <div><span className="fa fa-video-camera"></span><StyledLink value="New Videos" to="/new" onClick={handleClick}>New Videos</StyledLink></div>
             <div><span className="fa fa-music"></span><StyledLink value="Video Music" to="/videos" onClick={handleClick} state="musics">Video Music</StyledLink></div>
+            <div><span className="fa fa-venus-double"></span><StyledLink value="Dance" to="/videos" onClick={handleClick} state="dance">Dance</StyledLink></div>
             <div><span className="fa fa-font"></span><StyledLink value="Learning English" to="/videos" onClick={handleClick} state="Learning_English">Learning English</StyledLink></div>
             <div><span className="fa fa-headphones"></span><StyledLink value="English Podcasts" to="/videos" onClick={handleClick} state="English_Podcasts">English Podcasts</StyledLink></div>
             <div><span className="fa fa-gamepad"></span><StyledLink value="Game" to="/videos" onClick={handleClick} state="game">Game</StyledLink></div>
