@@ -2,7 +2,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import './App.sass';
-import {Navbar, ArchivedVideos, NewVideos, VideoDetail} from "./components";
+import {Navbar, ArchivedVideos, NewVideos, VideoDetail, SearchResult} from "./components";
 import {Home} from "./pages";
 
 function App() {
@@ -15,6 +15,7 @@ function App() {
                   <Route path="new" element={<NewVideos />} />
                   <Route path="videos" element={<ArchivedVideos />} />
                   <Route path="videoDetail" element={<VideoDetail />} />
+                  <Route path="search" element={<SearchResult />} />
               </Route>
           </Routes>
       </Router>
