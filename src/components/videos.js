@@ -10,8 +10,9 @@ export const Videos = ({videos}) => {
                     </Link>
                     <div className="card-body">
                         <div className="card-title">{item?.snippet?.title}</div>
-                        <div className="card-text">Channel Address: <a href={`https://www.youtube.com/channel/${item?.snippet?.channelId}`}>{item?.snippet?.channelTitle}</a>
-                            <span className="fa fa-check-circle ms-2"></span>
+                        <div className="card-text">Channel Address:
+                            {" "}<a href={`https://www.youtube.com/channel/${item?.snippet?.channelId}`}>{item?.snippet?.channelTitle}</a>
+                            <span className="fa fa-check-circle ms-2 fs-6"></span>
                         </div>
                     </div>
                 </div>

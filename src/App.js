@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import './App.sass';
 import {Navbar, ArchivedVideos, NewVideos, VideoDetail, SearchResult} from "./components";
-import {Home} from "./pages";
+import {Home, SignupForm, LoginPage} from "./pages";
 
 function App() {
   return (
@@ -11,6 +11,8 @@ function App() {
       <Router>
           <Navbar />
           <Routes>
+              <Route path="/signup" element={<SignupForm />} />
+              <Route path="/login" element={<LoginPage />} />
               <Route path="/" element={<Home />}>
                   <Route path="new" element={<NewVideos />} />
                   <Route path="videos" element={<ArchivedVideos />} />

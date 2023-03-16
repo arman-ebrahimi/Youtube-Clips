@@ -4,14 +4,18 @@ html, .App
   display: flex
   justify-content: space-between
   padding: 5px 30px
-  a
+  a.logo
     font-size: 3em
     text-decoration: none
     color: red
+  .registry
+    width: 150px
+    display: flex
+    justify-content: space-between
   .search-input
     padding: 5px 10px
     border-radius: 20px
-    width: 300px
+    width: 350px
     &:focus
       outline: none
   .search-icon
@@ -21,6 +25,9 @@ html, .App
 .home-page
   display: flex
   .sidebar
+    position: sticky
+    top: 0
+    height: max-content
     display: flex
     flex-direction: column
     min-width: 200px
@@ -71,8 +78,9 @@ html, .App
     gap: 20px
     justify-content: space-around
     .card
+      overflow: hidden
       width: 25%
-      height: 300px
+      height: 350px
       .card-body
         background-color: #222
         color: white
