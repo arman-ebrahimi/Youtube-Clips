@@ -32,6 +32,7 @@ export const Sidebar = () => {
             <div><span className="fa fa-plane"></span><StyledLink value="Traveling" to="/videos" onClick={handleClick} state="traveling">Traveling</StyledLink></div>
             <div><span className="fa fa-car"></span><StyledLink value="Cars" to="/videos" onClick={handleClick} state="cars">Cars</StyledLink></div>
             <div><span className="fa fa-cutlery"></span><StyledLink value="Cooking" to="/videos" onClick={handleClick} state="cooking">Cooking</StyledLink></div>
+            <div><span className="fa fa-cutlery"></span><StyledLink value="Humanity" to="/videos" onClick={handleClick} state="humanity">Humanity</StyledLink></div>
             <div><span className="fa fa-paw"></span><StyledLink value="Animals" to="/videos" onClick={handleClick} state="animals">Animals</StyledLink></div>
             <div><span className="fa fa-smile-o"></span><StyledLink value="Fun" to="/videos" onClick={handleClick} state="fun">Fun</StyledLink></div>
         </div>
