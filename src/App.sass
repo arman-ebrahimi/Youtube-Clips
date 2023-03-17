@@ -8,8 +8,8 @@ html, .App
     font-size: 3em
     text-decoration: none
     color: red
-  .registry
-    width: 150px
+  .buttons-menu
+    width: 250px
     display: flex
     justify-content: space-between
   .search-input
@@ -81,6 +81,15 @@ html, .App
       overflow: hidden
       width: 25%
       height: 350px
+      border-radius: 15px
+      transition: 0.3s
+      img
+        border-radius: 15px 15px 0 0
+        transition: 0.3s
+      &:hover
+        border-radius: 0
+        img
+          border-radius: 0
       .card-body
         background-color: #222
         color: white
@@ -134,4 +143,29 @@ html, .App
     height: 90vh
     overflow-y: scroll
     margin-right: 10px
+.reg-page
+  height: 80vh
+  display: flex
+  justify-content: center
+  align-items: center
+  .reg-form-box
+    width: max-content
+    label
+      color: white
+      display: block
+      margin-bottom: 6px
+    input, textarea
+      width: 30vw
+      margin-bottom: 10px
+      padding: 5px
+    input.button
+      display: block
+      width: 100px
+      margin: 10px auto 0
+      background-color: red
+      color: white
+      border: none
+      font-size: 1.2em
+      border-radius: 2px
+      font-weight: bold
 
