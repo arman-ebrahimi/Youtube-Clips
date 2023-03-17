@@ -6,15 +6,17 @@ export const Sidebar = () => {
 
     const [selectedCategory, setSelectedCategory] = useState("New Videos")
     const StyledLink = styled(Link)`
-    text-decoration: none;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 2px;  
-    background-color: ${(props) => props.value === selectedCategory && 'red'};  
-    &:hover{
-      color: ${(props) => props.value === selectedCategory ? "white" : "red"}
-    }
-    }
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 2px;  
+        background-color: ${(props) => props.value === selectedCategory && 'red'};  
+        &:hover{
+          color: ${(props) => props.value === selectedCategory ? "white" : "red"}
+        }
+        @media screen and (max-width: 778px){
+          padding: 5px 3px;
+        }
 `
     const handleClick = (e) => {
         setSelectedCategory(e.target.textContent)

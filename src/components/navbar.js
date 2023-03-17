@@ -20,7 +20,7 @@ export const Navbar = () => {
         setSelectedButton(e.target.textContent)
     }
     return(
-        <div className="bg-transparent mt-2 navbar">
+        <div className="mt-2 navbar">
             <a className="logo" href="https://www.youtube.com"><span className="fa fa-youtube"></span></a>
             <div className="buttons-menu">
                 <StyledLink to="/" value="Home" onClick={handleClick}>Home</StyledLink>
