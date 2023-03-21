@@ -7,7 +7,8 @@ export const Videos = ({videos}) => {
                 item.id &&
                     <div className="card" key={index}>
                         <Link to="/videoDetail" state={item}>
-                            <img src={item.snippet?.thumbnails?.medium?.url} className="card-img-top" alt="video" />
+                            <img src={item?.snippet?.thumbnails?.medium?.url} className="card-img-top" alt="video" />
+                            <span className="fa fa-play play-icon"></span>
                         </Link>
                         <div className="card-body">
                             <div className="card-title">{item?.snippet?.title}</div>

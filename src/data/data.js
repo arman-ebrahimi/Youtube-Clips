@@ -10,7 +10,7 @@ export const allVideos = {
     traveling: ["RSF8KL3xaIk", "cOxBMWBS9U8", "1ME0hmW6SLM", "t7aoiYeH4mc", "BwOqK5hYFKo", "IlU6l_d3ff8", "KtdfW8tOiSc", "wroGPb4-3yM", "xXwJoweRtxI"],
     cars: ["K9W0MtwrK98", "gOK0GEo3m4E", "01Ic9Hb2cRs", "mWMUWO13wN4", "zOsdfk0P4Ig", "bJZCM0lke_0", "uZZd2laEPJo", "tlThdr3O5Qo", "3jDO5NT12AI"],
     cooking: ["Dqstaunpae0", "z0aLnBT9fWI", "8G-ZxTjD7Zc", "Ak34skdOeNI", "nOpV4UnPebo", "OhhqXDKDYOk", "yPiS5zB1tDo", "rD0VO_ETYSg", "ulhRORJpuBM"],
-    humanity: ["IlNihz6LFqA", "", "",],
+    humanity: ["IlNihz6LFqA", "ZNs6PzRhSMg", "G6ERaPYaw1o", "9YIFedhVgLI", "helXtzTVGiQ", "OZHN2wABVu0", "aXzObqyDM4Y", "LMn9BLgZtYU"],
     animals: ["9xijslMumTk", "j_BckhLECVY", "TSSPDwAQLXs", "WQ_wO0r16ww", "JUSE2SaJgwE", "-SnKErN93qs", "kjKjlLRoLHw", "fb1KslyJlco", "_UbDeqPdUek"],
     fun: ["A9o2TEbh42U", "3euDY96MbUA", "CwzjlmBLfrQ", "Rv2kWGpB1AM", "PUrxjueKTYE", "48HwpwkPZ74", "QNAmN352YEU", "JN-YTozhJK8", "I722WlHuMa4"],
 }

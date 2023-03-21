@@ -1,3 +1,8 @@
+@mixin playing-icons
+  color: red
+  position: absolute
+  left: 45%
+
 html, .App
   background-color: black
 .navbar
@@ -30,13 +35,14 @@ html, .App
   display: flex
   .sidebar
     position: sticky
-    top: 100px
+    top: 0
     height: max-content
     display: flex
     flex-direction: column
-    min-width: 200px
+    min-width: 180px
     padding-left: 15px
     border-right: solid rgba(255,255,255, 0.5) 1px
+    overflow: scroll
     div
       margin-top: 30px
     div:last-child
@@ -62,10 +68,8 @@ html, .App
       width: 35%
       opacity: 0.8
       .play-icon, .load-icon
-        color: red
-        position: absolute
+        @include playing-icons
         top: 45%
-        left: 45%
       .play-icon
         font-size: 3em
       &:hover
@@ -81,6 +85,7 @@ html, .App
     gap: 20px
     justify-content: space-around
     .card
+      position: relative
       overflow: hidden
       width: 30%
       height: 350px
@@ -89,6 +94,10 @@ html, .App
       img
         border-radius: 15px 15px 0 0
         transition: 0.3s
+      .play-icon
+        @include playing-icons
+        top: 30%
+        font-size: 3em
       &:hover
         border-radius: 0
         img
@@ -109,10 +118,11 @@ html, .App
 .video-detail
   width: 100%
   display: flex
+  justify-content: space-between
   .single-video-box
     padding-left: 40px
     padding-right: 20px
-    width: 70%
+    width: 50vw
     display: flex
     flex-direction: column
     a
@@ -142,10 +152,17 @@ html, .App
     flex-direction: column
     align-items: center
     border-left: solid grey 1px
-    width: 30%
+    width: 25vw
     height: 90vh
     overflow-y: scroll
     margin-right: 10px
+    .related-video
+      position: relative
+      .load-icon, .play-icon
+        @include playing-icons
+        top: 40%
+      .play-icon
+        font-size: 3em
 .reg-page
   height: 80vh
   display: flex
@@ -172,19 +189,40 @@ html, .App
       border-radius: 2px
       font-weight: bold
 
+@media screen and (max-width: 1300px)
+  .video-detail .related-videos-box
+    width: 30vw
 @media screen and (max-width: 1100px)
   .home-page
     .archived-videos
       .video-img
         width: 45%
+  .video-detail .related-videos-box
+    width: 33vw
 @media screen and (max-width: 992px)
   .home-page
     .new-videos
       gap: 30px
       .card
         width: 40%
+  .video-detail
+    flex-direction: column
+    .single-video-box, .related-videos-box
+      width: 100%
+    .related-videos-box
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-around
+      .related-text
+        width: 100%
   .reg-page .reg-form-box input, .reg-page .reg-form-box textarea
     width: 50vw
+@media screen and (max-width: 900px)
+  .video-detail .related-videos-box
+    .related-video
+      width: 40%
+      img
+        width: 100%
 @media screen and (max-width: 778px)
   .navbar
     .search-input
@@ -208,6 +246,8 @@ html, .App
       width: 400px
   .home-page .new-videos .card
     width: 75%
+  .video-detail .related-videos-box .related-video
+    width: 70%
   .reg-page .reg-form-box input, .reg-page .reg-form-box textarea
     width: 70vw
 @media screen and (max-width: 480px)
