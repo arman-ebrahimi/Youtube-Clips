@@ -68,7 +68,7 @@ html, .App
       opacity: 0.8
       .play-icon, .load-icon
         @include playing-icons
-        top: 45%
+        top: 40%
       .play-icon
         font-size: 3em
       &:hover
@@ -226,6 +226,9 @@ html, .App
   .reg-page .reg-form-box input, .reg-page .reg-form-box textarea
     width: 50vw
 @media screen and (max-width: 900px)
+  .navbar
+    .buttons-menu
+      width: 260px
   .video-detail .related-videos-box
     .related-video
       width: 40%
@@ -235,6 +238,8 @@ html, .App
   .navbar
     .search-input
       width: 220px
+    .buttons-menu
+      width: 250px
   .home-page
     flex-direction: column
     .sidebar
@@ -252,10 +257,17 @@ html, .App
   .navbar
     .search-input
       width: 400px
-  .home-page .new-videos .card
-    width: 75%
-    .play-icon
-      top: 30%
+    .buttons-menu
+      width: 230px
+  .home-page
+    .new-videos .card
+      width: 75%
+      .play-icon
+        top: 30%
+    .archived-videos
+      .video-img
+        .play-icon, .load-icon
+          top: 35%
   .video-detail .related-videos-box .related-video
     width: 70%
   .reg-page .reg-form-box input, .reg-page .reg-form-box textarea
@@ -269,11 +281,19 @@ html, .App
           top: 25%
 @media screen and (max-width: 480px)
   .navbar
+    padding: 5px 15px
     .search-input
       width: 300px
+      margin-top: 10px
+    .buttons-menu
+      width: 200px
   .home-page
     .new-videos
       .card
         width: 85%
         .play-icon
           top: 20%
+@media screen and (max-width: 400px)
+  .navbar
+    .search-input
+      width: 250px

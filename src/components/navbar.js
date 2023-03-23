@@ -15,6 +15,12 @@ export const Navbar = () => {
         &:hover{
           color: white;
         }
+        @media screen and (max-width: 620px){
+          font-size: 1.1em;
+        }
+        @media screen and (max-width: 540px){
+          font-size: 1em;
+        }
     `
     const handleClick = (e) => {
         setSelectedButton(e.target.textContent)
