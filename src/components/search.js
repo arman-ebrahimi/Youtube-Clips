@@ -12,11 +12,13 @@ export const Search = () => {
         setString(e.target.value)
     }
     useEffect(() => {
-        fetchFromApi(`search?part=snippet,id&q=${string}`).then((data) => {
-            dispatch({type: "search/exploredVideos", payload: data.items.map((item) => ({
-                    ...item, id: item.id.videoId
-                }))})
-        }).then(() => navigate("/search"))
+        if(string.length !== 0){
+            fetchFromApi(`search?part=snippet,id&q=${string}`).then((data) => {
+                dispatch({type: "search/exploredVideos", payload: data.items.map((item) => ({
+                        ...item, id: item.id.videoId
+                    }))})
+            }).then(() => navigate("/search"))
+        }
         // eslint-disable-next-line
     }, [string])
     return(

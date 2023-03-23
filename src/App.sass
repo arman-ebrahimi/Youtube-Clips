@@ -42,11 +42,10 @@ html, .App
     min-width: 180px
     padding-left: 15px
     border-right: solid rgba(255,255,255, 0.5) 1px
-    overflow: scroll
     div
-      margin-top: 30px
+      margin-top: 25px
     div:last-child
-      margin-bottom: 30px
+      margin-bottom: 25px
     span
       font-size: 1.3em
       margin-right: 8px
@@ -96,7 +95,7 @@ html, .App
         transition: 0.3s
       .play-icon
         @include playing-icons
-        top: 30%
+        top: 25%
         font-size: 3em
       &:hover
         border-radius: 0
@@ -160,7 +159,7 @@ html, .App
       position: relative
       .load-icon, .play-icon
         @include playing-icons
-        top: 40%
+        top: 35%
       .play-icon
         font-size: 3em
 .reg-page
@@ -190,31 +189,40 @@ html, .App
       font-weight: bold
 
 @media screen and (max-width: 1300px)
+  .home-page
+    .new-videos
+      .card
+        .play-icon
+          top: 20%
   .video-detail .related-videos-box
     width: 30vw
 @media screen and (max-width: 1100px)
   .home-page
+    .new-videos
+      .card
+        width: 45%
+        .play-icon
+          top: 25%
     .archived-videos
       .video-img
         width: 45%
-  .video-detail .related-videos-box
-    width: 33vw
-@media screen and (max-width: 992px)
-  .home-page
-    .new-videos
-      gap: 30px
-      .card
-        width: 40%
   .video-detail
     flex-direction: column
-    .single-video-box, .related-videos-box
+    .single-video-box
       width: 100%
     .related-videos-box
+      width: 98%
       flex-direction: row
       flex-wrap: wrap
       justify-content: space-around
       .related-text
         width: 100%
+@media screen and (max-width: 992px)
+  .home-page
+    .new-videos
+      .card
+        .play-icon
+          top: 20%
   .reg-page .reg-form-box input, .reg-page .reg-form-box textarea
     width: 50vw
 @media screen and (max-width: 900px)
@@ -246,11 +254,26 @@ html, .App
       width: 400px
   .home-page .new-videos .card
     width: 75%
+    .play-icon
+      top: 30%
   .video-detail .related-videos-box .related-video
     width: 70%
   .reg-page .reg-form-box input, .reg-page .reg-form-box textarea
     width: 70vw
+@media screen and (max-width: 540px)
+  .home-page
+    .new-videos
+      .card
+        width: 80%
+        .play-icon
+          top: 25%
 @media screen and (max-width: 480px)
   .navbar
     .search-input
       width: 300px
+  .home-page
+    .new-videos
+      .card
+        width: 85%
+        .play-icon
+          top: 20%
