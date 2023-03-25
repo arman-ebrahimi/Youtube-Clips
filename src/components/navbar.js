@@ -5,6 +5,7 @@ import {useState} from "react";
 
 export const Navbar = () => {
     const [selectedButton, setSelectedButton] = useState("Home");
+    const [show, setShow] = useState(false);
     const StyledLink = styled(Link)`
         text-decoration: none;
         color: white;
@@ -25,9 +26,25 @@ export const Navbar = () => {
     const handleClick = (e) => {
         setSelectedButton(e.target.textContent)
     }
+    const showOther = () => {
+        setShow(!show)
+    }
+    let button = document.getElementById("button");
+    document.addEventListener("click", (event) => {
+        if(!button.contains(event.target)){
+            setShow(false)
+        }
+    })
     return(
         <div className="mt-2 navbar">
             <a className="logo" href="https://www.youtube.com"><span className="fa fa-youtube"></span></a>
+            <div style={{position: "relative"}}>
+                <button id="button" className="other-button" onClick={showOther} style={{backgroundColor: show ? "red" : "#444"}}>Others</button>
+                <div style={{opacity: show ? 0.9 : 0, visibility: show ? "visible" : "hidden"}} className="otherItems">
+                    <a target="_blank" href="https://friendly-cascaron-e0e8b3.netlify.app/">Card Memory Game</a>
+                    <a target="_blank" href="https://profound-meerkat-a72c3c.netlify.app/">Check Weather</a>
+                </div>
+            </div>
             <div className="buttons-menu">
                 <StyledLink to="/" value="Home" onClick={handleClick}>Home</StyledLink>
                 <StyledLink to="/signup" value="Signup" onClick={handleClick}>Signup</StyledLink>{" "}
