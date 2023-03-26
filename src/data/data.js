@@ -12,5 +12,5 @@ export const allVideos = {
     cooking: ["Dqstaunpae0", "z0aLnBT9fWI", "8G-ZxTjD7Zc", "Ak34skdOeNI", "nOpV4UnPebo", "OhhqXDKDYOk", "yPiS5zB1tDo", "rD0VO_ETYSg", "ulhRORJpuBM"],
     humanity: ["IlNihz6LFqA", "ZNs6PzRhSMg", "G6ERaPYaw1o", "9YIFedhVgLI", "helXtzTVGiQ", "OZHN2wABVu0", "aXzObqyDM4Y", "LMn9BLgZtYU"],
     animals: ["9xijslMumTk", "j_BckhLECVY", "TSSPDwAQLXs", "WQ_wO0r16ww", "JUSE2SaJgwE", "-SnKErN93qs", "kjKjlLRoLHw", "fb1KslyJlco", "_UbDeqPdUek", "4jLtTsPn18U"],
-    fun: ["A9o2TEbh42U", "3euDY96MbUA", "CwzjlmBLfrQ", "Rv2kWGpB1AM", "PUrxjueKTYE", "48HwpwkPZ74", "QNAmN352YEU", "JN-YTozhJK8", "I722WlHuMa4"],
+    fun: ["A9o2TEbh42U", "CwzjlmBLfrQ", "Rv2kWGpB1AM", "PUrxjueKTYE", "48HwpwkPZ74", "QNAmN352YEU", "JN-YTozhJK8", "I722WlHuMa4"],
 }

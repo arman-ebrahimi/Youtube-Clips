@@ -18,12 +18,18 @@ export const Sidebar = () => {
           padding: 5px 3px;
         }
 `
+    const Div = styled.div`
+        @media screen and (max-width: 778px){
+          display: none;
+        }
+    `
     const handleClick = (e) => {
         setSelectedCategory(e.target.textContent)
     }
     return(
         <div className="sidebar">
             <div><span className="fa fa-video-camera"></span><StyledLink value="New Videos" to="/new" onClick={handleClick}>New Videos</StyledLink></div>
+            <Div style={{marginLeft: -15, marginTop: -10, fontSize: "1.1em", textAlign: "center"}}><div style={{color: "red"}}>- Selected Videos -</div><hr style={{color: "white", margin: "10px 10px 0 10px"}} /></Div>
             <div><span className="fa fa-music"></span><StyledLink value="Video Music" to="/videos" onClick={handleClick} state="musics">Video Music</StyledLink></div>
             <div><span className="fa fa-venus-double"></span><StyledLink value="Dance" to="/videos" onClick={handleClick} state="dance">Dance</StyledLink></div>
             <div><span className="fa fa-font"></span><StyledLink value="Learning English" to="/videos" onClick={handleClick} state="Learning_English">Learning English</StyledLink></div>

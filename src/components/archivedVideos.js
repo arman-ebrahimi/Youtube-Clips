@@ -2,7 +2,7 @@ import {useLocation} from "react-router-dom";
 import {allVideos} from "../data/data";
 import {useNavigate} from "react-router-dom";
 import {fetchFromApi} from "../api/fetchFromApi";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export const ArchivedVideos = () => {
     let typeOfVideos = useLocation().state;
@@ -15,6 +15,11 @@ export const ArchivedVideos = () => {
             navigate("/videoDetail", {state: data.items[0]});
         })
     }
+    useEffect(() => {
+        setTimeout(function (){
+            window.scrollTo(0, 0)
+        }, 2)
+    }, [typeOfVideos])
     return(
         <div className="d-flex flex-column archive-box">
             <h3 className="ms-3"><span className="category-name">{typeOfVideos}</span> videos</h3>
