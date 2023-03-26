@@ -41,8 +41,8 @@ export const Navbar = () => {
             <div style={{position: "relative"}}>
                 <button id="button" className="other-button" onClick={showOther} style={{backgroundColor: show ? "red" : "#444"}}>Others</button>
                 <div style={{opacity: show ? 0.9 : 0, visibility: show ? "visible" : "hidden"}} className="otherItems">
-                    <a target="_blank" rel="noreferrer" href="https://friendly-cascaron-e0e8b3.netlify.app/">Card Memory Game</a>
-                    <a target="_blank" rel="noreferrer" href="https://profound-meerkat-a72c3c.netlify.app/">Check Weather</a>
+                    <a target="_blank" rel="noreferrer" href="https://friendly-cascaron-e0e8b3.netlify.app/">- Card Memory Game</a>
+                    <a target="_blank" rel="noreferrer" href="https://profound-meerkat-a72c3c.netlify.app/">- Check Weather</a>
                 </div>
             </div>
             <div className="buttons-menu">
