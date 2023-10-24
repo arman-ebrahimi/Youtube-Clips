@@ -2,14 +2,6 @@
   color: red
   position: absolute
   left: 45%
-@mixin other-button
-  position: relative
-  border: 2px solid black
-  border-radius: 3px
-  color: white
-  padding: 5px 8px
-  background-color: #555
-  transition: all 0.1s
 
 html, .App
   background-color: black
@@ -25,14 +17,14 @@ html, .App
     font-size: 3em
     text-decoration: none
     color: red
-  .other-button-off
-    @include other-button
-    box-shadow: -1px 5px rgb(30, 30, 30), -2px 5px rgb(30, 30, 30), 0 3px 30px rgb(255, 255, 255)
-  .other-button-on
-    @include other-button
-    box-shadow: 0 2px rgb(30, 30, 30), 0 3px 15px rgb(255, 255, 255)
-    top: 4px
-    left: -1px
+  .other-button
+    position: relative
+    border: 2px solid black
+    border-radius: 3px
+    color: white
+    padding: 5px 8px
+    background-color: #555
+    transition: all 0.1s
   .otherItems
     transition: opacity 0.5s, visibility 0.5s
     display: flex

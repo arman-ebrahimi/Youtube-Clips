@@ -39,7 +39,7 @@ export const Navbar = () => {
         <div className="mt-2 navbar">
             <a className="logo" href="https://www.youtube.com"><span className="fa fa-youtube"></span></a>
             <div style={{position: "relative"}}>
-                <button id="button" className={`${show ? "other-button-on" : "other-button-off"}`} onClick={showOther}>Others <span className="fa fa-angle-down"></span></button>
+                <button id="button" className='other-button' onClick={showOther}>Others <span className="fa fa-angle-down"></span></button>
                 <div style={{opacity: show ? 0.9 : 0, visibility: show ? "visible" : "hidden"}} className="otherItems">
                     <a target="_blank" rel="noreferrer" href="https://friendly-cascaron-e0e8b3.netlify.app/">- Card Memory Game</a>
                     <a target="_blank" rel="noreferrer" href="https://profound-meerkat-a72c3c.netlify.app/">- Check Weather</a>
